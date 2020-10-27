@@ -10,13 +10,13 @@ Program korzysta z API dostępnego pod adresem https://wl-api.mf.gov.pl/api/.
 2. Przejdź do katalogu checkcompanyinfo: `$cd checkcompanyinfo`;
 3. Upewnij się, że jesteś w katalogu checkcompanyinfo: `$pwd`;
 4. Zbuduj obraz dockera: `$docker build -t checkcompanyinfo .`;
-5. Uruchom kontener: `$docker run -d -p 5000:5000 --name checkcompanyinfo_container checkcompanyinfo`;
+5. Uruchom kontener: `$docker-compose up`;
 6. Serwer jest uruchomiony!
 
 
 **Instrukcja użycia:**
 
-Pod adres `http://127.0.0.1:5000/check/{nr nip}` wysyłamy zapytanie metodą GET.
+Pod adres `http://0.0.0.0:33303/check/{nr nip}` wysyłamy zapytanie metodą GET.
 
 W odpowiedzi powinniśmy dostać podobnego jsona:
 

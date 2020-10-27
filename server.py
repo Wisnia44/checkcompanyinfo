@@ -5,7 +5,7 @@ from datetime import date
 import json
 
 app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+app.config["DEBUG"] = False
 
 def ask_apiwl(nip):
 	today = date.today()
@@ -26,4 +26,5 @@ def check_company_info(key):
     response = ask_apiwl(key)
     return response
 
-app.run()
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=33303, debug=True)
