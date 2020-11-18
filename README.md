@@ -27,3 +27,12 @@ W odpowiedzi powinniśmy dostać podobnego jsona:
     "name": "ARTIM SAFETY KRZYSZTOF NIEŚCIOR SPÓŁKA JAWNA"
 }
 ```
+
+Przykładowo kod w Pythonie wysyłający takie zapytanie wygląda następująco:
+```
+import requests
+
+address = "http://0.0.0.0:33303/check/9121480498"
+response = requests.get(address)
+print(response.content)
+```

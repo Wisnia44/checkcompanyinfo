@@ -24,7 +24,7 @@ def ask_apiwl(nip):
 @app.route('/check/<string:key>/', methods = ['GET'])
 def check_company_info(key):
     response = ask_apiwl(key)
-    return response
+    return jsonify(response)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=33303, debug=True)
